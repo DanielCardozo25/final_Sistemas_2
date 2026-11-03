@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Tienda de Insumos Informaticos</title>
+    <link rel='stylesheet' href='css/style.css'>
+</head>
+<body>
+    <header>
+        <h1>Tienda de Insumos Informaticos</h1>
+        <span id='bienvenida' class='oculto'></span>
+        <button id='btn-login' class='btn-comprar'>Iniciar sesión</button>
+    </header>
+    <section id='login' class='oculto'>
+        <h2>Iniciar sesión</h2>
+        <input id='usuario' placeholder='Usuario' />
+        <input id='password' type='password' placeholder='Contraseña' />
+        <button id='btn-do-login' class='btn-comprar'>Entrar</button>
+        <p id='mensaje-login' class='mensaje'></p>
+    </section>
+    <section id='perfil' class='oculto'>
+        <h2>Perfil</h2><br>
+        <div id='perfil-datos'></div><br>
+        <button id='btn-cambiar-clave' class='btn-comprar'>Cambiar password</button><br>
+        <div id='cambio-clave' class='oculto'>
+            <input id='clave-actual' type='password' placeholder='Clave actual' />
+            <input id='clave-nueva' type='password' placeholder='Clave nueva' />
+            <button id='btn-confirmar-clave' class='btn-comprar'>Confirmar</button>
+            <p id='mensaje-clave' class='mensaje'></p>
+        </div><br>
+        <h3>Mis compras</h3><br>
+        <div style='display:flex; gap:16px;'>
+            <div id='tickets-lista' style='flex:1;'></div>
+            <div id='ticket-detalle' style='flex:1;'></div>
+        </div>
+    </section>
+        <section id='tienda'>
+            <h2>Productos</h2>
+            <div id='productos' class='productos-grid'></div>
+        </section>
+    <aside id='carrito' class='carrito-fijo'>
+        <h2>Carrito</h2>
+        <div id='carrito-items'></div>
+        <p>Total: $<span id='total'>0</span></p>
+        <button id='btn-comprar' class='btn-comprar'>Pagar</button>
+        <p id='mensaje-compra' class='mensaje'></p>
+        <section id='pago' class='oculto'>
+            <h2>Medio de pago</h2>
+            <select id='medio-pago'><option value=''>Seleccionar</option></select>
+            <button id='btn-confirmar-pago' class='btn-comprar'>Confirmar</button>
+        </section>
+    </aside>
+    <section id='confirmacion' class='oculto'>
+        <h2>Compra Exitosa</h2>
+        <div id='ticket-info'></div>
+        <button id='btn-nueva-compra' class='btn-nueva'>Nueva Compra</button>
+    </section>
+    <div id='modal-exito' class='oculto modal-exito'>
+        <div class='modal-contenido'>
+            <button id='modal-cerrar' class='modal-cerrar'>X</button>
+            <p>Compra exitosa</p>
+            <button id='modal-ok' class='btn-comprar'>OK</button>
+        </div>
+    </div>
+    <div id='modal-stock' class='oculto modal-exito'>
+        <div class='modal-contenido'>
+            <button id='modal-stock-cerrar' class='modal-cerrar'>X</button>
+            <p>⚠️ No hay stock disponible</p>
+            <button id='modal-stock-ok' class='btn-comprar'>OK</button>
+        </div>
+    </div>
+    <div id='modal-clave' class='oculto modal-exito'>
+        <div class='modal-contenido'>
+            <button id='modal-clave-cerrar' class='modal-cerrar'>X</button>
+            <p id='modal-clave-msg'></p>
+            <button id='modal-clave-ok' class='btn-comprar'>OK</button>
+        </div>
+    </div>
+    <script src='js/app.js'></script>
+</body>
+</html>
+
